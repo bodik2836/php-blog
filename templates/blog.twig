@@ -1,13 +1,13 @@
 {% extends 'base.twig' %}
 
 {% block content %}
-<h3 class="mb-3 mt-3">Latest posts</h3>
+<h3 class="mb-3 mt-3">Blog</h3>
 <div class="container">
     <div class="row">
         <div class="col-md-9">
             {% include 'sections/posts.twig' with posts %}
             <div class="row">
-                <a href="{{ url('blog') }}">View all</a>
+                {% include 'sections/pagination.twig' with pagination %}
             </div>
         </div>
         <div class="col-md-3">
